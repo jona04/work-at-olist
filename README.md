@@ -15,3 +15,32 @@ Then open the console and write:
 ```console
 pipenv install --dev
 ```
+
+### Configuring the database
+
+Two ways of create a database: first with Sqlite and second with Postgres:
+
+* Sqlite - Comment the tag DATABASE_URL inside of contrib/env-sample
+
+* Postgres - Just follows the steps in the tag DATABASE_URL inside of contrib/env-sample
+
+The migrations already is automatic in heroku
+
+### Travis
+
+Travis was configurated to make the follow test before deploy:
+
+```
+  - pipenv run flake8
+  - pipenv run pytest --cov=olist
+```
+
+### Tests
+
+The pytest is not completed yet
+
+### API 
+
+To build the api was used the Dango Rest Frame Work
+
+Still in development
