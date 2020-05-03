@@ -44,3 +44,16 @@ The pytest is not completed yet
 To build the api was used the Dango Rest Frame Work
 
 Still in development
+
+### Access Dajngo Admin
+
+To check the Django Admin in Heroku web site was created an user teste.
+
+To entry access the [Olist At Work - Admin Heroku](https://olistproject.herokuapp.com/admin)
+
+Then use:
+* username: teste
+* password: teste12345
+
+The user have access to view the models.
+
