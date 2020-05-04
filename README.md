@@ -87,9 +87,9 @@ The user have access just to view the models.
 
 ### Populating Author with CSV file
 
-This feature is in process.
+This feature is in progress.
 
-### CRUD Api
+### CRUD - API
 
 The ModelViewSet in Django REST framework already implements actions for GET, POST, PUT and DELETE HTTP methods.
 
@@ -132,7 +132,7 @@ PUT base_url/books/{id}/
  "name": // Name of the book;
  "edition": // Edition number;
  "publication_year": // Publication year of the book;
- "authors": [] // List of author ids, same ids of previous imported data
+ "authors_id": [] // List of author ids, same ids of previous imported data
 }
 
 PUT base_url/authors/{id}/
