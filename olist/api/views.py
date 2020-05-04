@@ -12,7 +12,7 @@ class BookViewSet(viewsets.ModelViewSet):
     serializer_class = BookSerializer
 
     filter_backends = (filters.SearchFilter,)
-    search_fields = 'name'
+    search_fields = ('name', 'publication_year', 'edition')
 
 
 class AuthorViewSet(viewsets.ModelViewSet):
@@ -23,4 +23,4 @@ class AuthorViewSet(viewsets.ModelViewSet):
     serializer_class = AuthorSerializer
 
     filter_backends = (filters.SearchFilter,)
-    search_fields = 'name'
+    search_fields = ('name',)
