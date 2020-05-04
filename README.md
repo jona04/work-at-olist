@@ -88,3 +88,9 @@ The user have access just to view the models.
 ### Populating Author with CSV file
 
 This feature is in process.
+
+### CRUD Api
+
+To Create and Read already is implemented with Django Rest framework.
+
+The Update an Delete is being implemented yet.
