@@ -68,7 +68,11 @@ The pytest is not completed yet.
 
 To build the api was used the [Dango REST frameWork](https://www.django-rest-framework.org).
 
-Still in development.
+And you can access directly by the Heroku url home of this Project.
+
+```
+https://olistproject.herokuapp.com/
+```
 
 ### Access Django Admin
 
@@ -81,3 +85,6 @@ Access the site [Olist At Work - Admin Heroku](https://olistproject.herokuapp.co
 
 The user have access just to view the models.
 
+### Populating Author with CSV file
+
+This feature is in process.
