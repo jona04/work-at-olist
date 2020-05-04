@@ -97,7 +97,6 @@ The ModelViewSet in Django REST framework already implements actions for GET, PO
 base_url = https://olistproject.herokuapp.com/
 ```
 
-
 To list all models, set the follow HTTP request:
 
 ```
@@ -105,16 +104,49 @@ GET base_url/authors/
 GET base_url/books/
 ```
 
-To Create an model, set the follow commands and payload:
+To Create an model:
 
 ```
-GET https://olistproject.herokuapp.com/
+POST base_url/books/
 
 {
-    "name": "",
-    "edition": null,
-    "publication_year": null,
-    "authors": []
+ "name": // Name of the book;
+ "edition": // Edition number;
+ "publication_year": // Publication year of the book;
+ "authors": [] // List of author ids, same ids of previous imported data
 }
 
+POST base_url/authors/
+
+{
+ "name": // Name of the author;
+}
 ```
+
+To Update an model:
+
+```
+PUT base_url/books/{id}/
+
+{
+ "name": // Name of the book;
+ "edition": // Edition number;
+ "publication_year": // Publication year of the book;
+ "authors": [] // List of author ids, same ids of previous imported data
+}
+
+PUT base_url/authors/{id}/
+
+{
+ "name": // Name of the author;
+}
+```
+
+To Delete an model:
+
+```
+DELETE base_url/books/{id}/
+DELETE base_url/authors/{id}/
+```
+
+Note: The relationship among the models are PROTECTED. So to delete some models, you need to edit the Book and remove the Author. Then you can DELETE the specific book or author.
