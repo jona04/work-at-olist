@@ -1,7 +1,7 @@
 [[source]]
 name = "pypi"
 url = "https://pypi.org/simple"
-verify_ssl = true #garante a segurança dos pacotes instalados
+verify_ssl = true #guarantee the security of installed packages
 
 [dev-packages]
 flake8 = "*"

@@ -62,7 +62,9 @@ The Travis was configurated to make the follow tests before deploy:
 
 ### Tests
 
-The pytest is not completed yet.
+![Image description](https://i.ibb.co/THw7JC5/Screen-Shot-2020-05-04-at-14-16-55.png)
+
+This tests was printed from travis, after deploy in heroku. Still need some tests in settings e serializers.
 
 ### API 
 
