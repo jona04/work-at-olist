@@ -33,6 +33,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    'olist.api.apps.ApiConfig',
     'olist.library.apps.LibraryConfig',
     'django.contrib.admin',
     'django.contrib.auth',

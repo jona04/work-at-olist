@@ -17,9 +17,9 @@ class Author(models.Model):
 
 class Book(models.Model):
     name = models.CharField('Name', max_length=32)
-    edition = models.IntegerField('Edition', max_length=32)
+    edition = models.IntegerField('Edition')
     publication_year = models.IntegerField('Publication Year')
-    authors = models.ManyToManyField(Author, through='GroupBookAuthor', null=True)
+    authors = models.ManyToManyField(Author, through='GroupBookAuthor')
     created_at = models.DateTimeField('Created at', auto_now_add=True, null=True)
     uploaded_at = models.DateTimeField('Updated at', auto_now=True, null=True)
 
