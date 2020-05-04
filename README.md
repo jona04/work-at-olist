@@ -91,6 +91,30 @@ This feature is in process.
 
 ### CRUD Api
 
-To Create and Read already is implemented with Django Rest framework.
+The ModelViewSet in Django REST framework already implements actions for GET, POST, PUT and DELETE HTTP methods.
 
-The Update an Delete is being implemented yet.
+```
+base_url = https://olistproject.herokuapp.com/
+```
+
+
+To list all models, set the follow HTTP request:
+
+```
+GET base_url/authors/
+GET base_url/books/
+```
+
+To Create an model, set the follow commands and payload:
+
+```
+GET https://olistproject.herokuapp.com/
+
+{
+    "name": "",
+    "edition": null,
+    "publication_year": null,
+    "authors": []
+}
+
+```
