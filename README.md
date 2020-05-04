@@ -11,7 +11,7 @@ Application available in Heroku: [Olist At Work - Heroku](https://olistproject.h
 
 To install need to use Pipenv
 
-Then open the console and write:
+Then, to install all the package requirements, execute the code in console, inside the project folder:
 ```console
 pipenv install --dev
 ```
@@ -20,15 +20,40 @@ pipenv install --dev
 
 Two ways of create a database: first with Sqlite and second with Postgres:
 
-* Sqlite - Comment the tag DATABASE_URL inside of contrib/env-sample
+* Sqlite - Not use tag DATABASE_URL inside of contrib/env-sample;
 
-* Postgres - Just follows the steps in the tag DATABASE_URL inside of contrib/env-sample
+* Postgres - Just follows the steps in the tag DATABASE_URL inside of contrib/env-sample.
 
-The migrations already is automatic in heroku
+### File .env
+
+In contrib/env-sample there is an example of all the environment variables used in the project. 
+To do this was used the library [python-decouple](https://github.com/henriquebastos/python-decouple).
+
+The variables who are empty, is not obligatory.  
+
+The variables who have AWS in the name, need your own credentials. This is needed to deploy the static files in AWS S3. 
+More about it in the next section.
+
+### Collect Static Files
+
+In the env-sample file there is three variables:
+
+* AWS_ACCESS_KEY_ID
+* AWS_SECRET_ACCESS_KEY
+* AWS_STORAGE_BUCKET_NAME
+
+This variables are used to configurate the collect static in Heroku. The first two variables is referent of User IAM. 
+The third variable is the name of your bucket.
+
+To create the static files you need to run the follow code in console:
+
+```
+python manage.py collectstatic
+```
 
 ### Travis
 
-Travis was configurated to make the follow test before deploy:
+The Travis was configurated to make the follow tests before deploy:
 
 ```
   - pipenv run flake8
@@ -37,23 +62,22 @@ Travis was configurated to make the follow test before deploy:
 
 ### Tests
 
-The pytest is not completed yet
+The pytest is not completed yet.
 
 ### API 
 
-To build the api was used the Dango Rest Frame Work
+To build the api was used the [Dango REST frameWork](https://www.django-rest-framework.org).
 
-Still in development
+Still in development.
 
-### Access Dajngo Admin
+### Access Django Admin
 
-To check the Django Admin in Heroku web site was created an user teste.
+To check the Django Admin in Heroku, was created an user *teste*.
 
-To entry access the [Olist At Work - Admin Heroku](https://olistproject.herokuapp.com/admin)
+Access the site [Olist At Work - Admin Heroku](https://olistproject.herokuapp.com/admin) and use the follow pass:
 
-Then use:
 * username: teste
 * password: teste12345
 
-The user have access to view the models.
+The user have access just to view the models.
 
