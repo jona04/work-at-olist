@@ -23,7 +23,7 @@ before_script:
 
 script:
   - pipenv run flake8 #executa comando flake8
-  - pipenv run pytest --cov=olist
+  - pipenv run pytest --cov=olist library api
 
 after_success:
   - pipenv run codecov #exibi cobertura apos push

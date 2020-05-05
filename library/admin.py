@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from olist.library.models import Book, Author, GroupBookAuthor
+from library.models import GroupBookAuthor, Book, Author
 
 
 class GroupBookAuthorInline(admin.TabularInline):

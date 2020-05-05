@@ -57,14 +57,14 @@ The Travis was configurated to make the follow tests before deploy:
 
 ```
   - pipenv run flake8
-  - pipenv run pytest --cov=olist
+  - pipenv run pytest --cov=olist library api
 ```
 
 ### Tests
 
 ![Image description](https://i.ibb.co/THw7JC5/Screen-Shot-2020-05-04-at-14-16-55.png)
 
-This tests was printed from travis, after deploy in heroku. Still need some tests in settings e serializers.
+This tests was printed from travis, after deploy in heroku. Still need some tests in settings and serializers.
 
 ### API 
 
@@ -89,7 +89,11 @@ The user have access just to view the models.
 
 ### Populating Author with CSV file
 
-This feature is in progress.
+Execute the comand:
+
+```
+python manage.py import_authors authors.csv
+```
 
 ### CRUD - API
 
