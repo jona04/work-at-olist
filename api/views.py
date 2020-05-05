@@ -1,7 +1,7 @@
 from rest_framework import viewsets, filters
 
-from olist.api.serializers import BookSerializer, AuthorSerializer
-from olist.library.models import Book, Author
+from api.serializers import BookSerializer, AuthorSerializer
+from library.models import Book, Author
 
 
 class BookViewSet(viewsets.ModelViewSet):

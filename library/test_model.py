@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from olist.library.models import Author, Book, GroupBookAuthor
+from library.models import Author, Book, GroupBookAuthor
 from olist.settings import INSTALLED_APPS
 
 
@@ -11,9 +11,6 @@ class EntryModelTest(TestCase):
 
     def test_verbose_name_plural_author(self):
         self.assertEqual(str(Author._meta.verbose_name_plural), "Authors")
-
-    def test_library_is_configured(self):
-        assert 'olist.library.apps.LibraryConfig' in INSTALLED_APPS
 
     def test_string_representation_book(self):
         book = Book(name="Book Jonatas")
